@@ -1,0 +1,22 @@
+{
+  "name": "scalab-nodejs-service",
+  "version": "0.0.1",
+  "description": "Helloworld NodeJS Poc",
+  "main": "index.js",
+  "author": "Mathieu Durand",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "async": "^2.3.0",
+    "body-parser": "^1.17.1",
+    "change-case": "^3.0.1",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.2",
+    "morgan": "^1.8.1",
+    "nconf": "^0.8.4",
+    "require-dir": "^0.3.1",
+    "underscore": "^1.8.3",
+    "winston": "^2.3.1"
+  }
+}
