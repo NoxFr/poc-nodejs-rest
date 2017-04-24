@@ -1,4 +1,4 @@
-FROM node:7.8.0
+FROM node:7.9.0-alpine
 EXPOSE 4000
 
 COPY package.json package.json  
