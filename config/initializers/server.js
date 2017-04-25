@@ -10,6 +10,7 @@ var config = require('nconf');
 var bodyParser = require('body-parser');
 var morgan = require('morgan');
 var logger = require('winston');
+
 var app;
 
 var start =  function(cb) {
@@ -24,9 +25,7 @@ var start =  function(cb) {
   logger.info('[SERVER] Initializing routes');
   require('../../app/routes/index')(app);
 
- //  app.use(express.static(path.join(__dirname, 'public')));
-
-  // Error handler
+   // Error handler
   app.use(function(err, req, res, next) {
     res.status(err.status || 500);
     res.json({
