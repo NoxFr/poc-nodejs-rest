@@ -31,7 +31,7 @@ async.series([
     if (err) {
       logger.error('[APP] initialization failed', err);
     } else {
-      logger.info('[APP] initialized SUCCESSFULLY');
+      logger.info('[APP] initialized succeed');
     }
   }
 );
