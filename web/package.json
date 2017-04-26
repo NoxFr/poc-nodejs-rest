@@ -1,16 +1,15 @@
 {
   "name": "scalab-nodejs-service",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Helloworld NodeJS Poc",
   "main": "index.js",
   "author": "Mathieu Durand",
   "scripts": {
     "start": "node index.js"
   },
-  "repository" :
-  { 
-    "type" : "git",
-    "url" : "http://archiforge/scalab/scalab-nodejs-service.git"
+  "repository": {
+    "type": "git",
+    "url": "http://archiforge/scalab/scalab-nodejs-service.git"
   },
   "dependencies": {
     "async": "^2.3.0",
@@ -18,6 +17,7 @@
     "change-case": "^3.0.1",
     "dotenv": "^4.0.0",
     "express": "^4.15.2",
+    "express-myconnection": "^1.0.4",
     "morgan": "^1.8.1",
     "mysql": "^2.13.0",
     "nconf": "^0.8.4",

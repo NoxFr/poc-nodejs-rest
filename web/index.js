@@ -2,6 +2,7 @@
 'use strict';
 
 var server = require('./config/initializers/server');
+var database =  require('./config/initializers/database');
 var nconf = require('nconf');
 var async = require('async');
 var logger = require('winston');
@@ -10,20 +11,19 @@ var logger = require('winston');
 require('dotenv').load();
 
 // Set up configs
-nconf.use('memory');
-// First load command line arguments
-nconf.argv();	
-// Load environment variables
-nconf.env();
-// Load config file for the environment
+nconf.use('memory')
+     .argv()
+     .env();
+
 require('./config/environments/' + nconf.get('NODE_ENV'));
 
 logger.info('[APP] Starting server initialization');
+logger.info('[APP] Environnement : '+ nconf.get('NODE_ENV'));
 
 // Initialize Modules
 async.series([
   function initializeDBConnection(callback) {
-    require('./config/initializers/database')(callback);
+    database.testConnection(callback);
   },
   function startServer(callback) {
     server(callback);

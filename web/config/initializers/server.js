@@ -1,6 +1,7 @@
 // config/initializers/server.js
-
+var database =  require('./database');
 var express = require('express');
+
 var path = require('path');
 // Local dependecies
 var config = require('nconf');
@@ -21,9 +22,11 @@ var start =  function(cb) {
   app.use(morgan('common'));
   app.use(bodyParser.urlencoded({extended: true}));
   app.use(bodyParser.json({type: '*/*'}));
+  app.use(database.getMyConnectionMiddleWare());
 
   logger.info('[SERVER] Initializing routes');
   require('../../app/routes/index')(app);
+
 
    // Error handler
   app.use(function(err, req, res, next) {
