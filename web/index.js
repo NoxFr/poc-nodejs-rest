@@ -10,28 +10,24 @@ var logger = require('winston');
 require('dotenv').load();
 
 // Set up configs
-nconf.use('memory');
-// First load command line arguments
-nconf.argv();	
-// Load environment variables
-nconf.env();
-// Load config file for the environment
+nconf.use('memory')
+  .argv()
+  .env();
+
 require('./config/environments/' + nconf.get('NODE_ENV'));
 
 logger.info('[APP] Starting server initialization');
+logger.info('[APP] Environnement : ' + nconf.get('NODE_ENV'));
 
 // Initialize Modules
 async.series([
-  function initializeDBConnection(callback) {
-    require('./config/initializers/database')(callback);
-  },
   function startServer(callback) {
     server(callback);
-  }], function(err) {
-    if (err) {
-      logger.error('[APP] initialization failed', err);
-    } else {
-      logger.info('[APP] initialized SUCCESSFULLY');
-    }
   }
-);
+], function(err) {
+  if (err) {
+    logger.error('[APP] initialization failed', err);
+  } else {
+    logger.info('[APP] initialized succeed');
+  }
+});
