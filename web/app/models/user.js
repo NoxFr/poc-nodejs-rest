@@ -1,5 +1,21 @@
 // app/models/user.js
-// INITILIAZE your model here
-// var User =  new Model()
+"use strict";
 
-// module.exports = User;
+
+module.exports = function(sequelize, DataTypes) {
+	var User = sequelize.define("User", {
+		id: {
+			type: DataTypes.INTEGER,
+			autoIncrement: true,
+			primaryKey: true
+		},
+		login: {
+			type: DataTypes.STRING
+		}
+	}, {
+		timestamps: false,
+		tableName: 't_users'
+	});
+
+	return User;
+};

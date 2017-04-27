@@ -12,7 +12,8 @@ Jira : http://typunch/jira/browse/LAB-58
 
 - NodeJS : v7.9.0
 - Express : 4.X
-- MySql
+- Sequelize (ORM) : 3.30.X
+- MySQL : 5.7
 - Voir package.json pour le reste.
 
 
