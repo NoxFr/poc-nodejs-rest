@@ -43,8 +43,8 @@ Les variables d'environnements (connexion BDD, port applicatif etc.) sont gerée
 TODO: A Compléter
 
 ## Historique
-0.0.2 - 20170421 - Ajout d'une BDD MySQL
-0.0.1 - 20170421 - Initialisation
+- 0.0.2 - 20170421 - Ajout d'une BDD MySQL
+- 0.0.1 - 20170421 - Initialisation
 
 ## Contributeurs
       
