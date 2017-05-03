@@ -4,9 +4,9 @@ ADD InitDatabase.sql /etc/mysql/InitDatabase.sql
 
 RUN chown -R mysql:root /var/lib/mysql/
 
-ARG MYSQL_DATABASE=default_database
-ARG MYSQL_USER=default_user
-ARG MYSQL_PASSWORD=secret
+ARG MYSQL_DATABASE=scalab-users-service
+ARG MYSQL_USER=root
+ARG MYSQL_PASSWORD=root
 ARG MYSQL_ROOT_PASSWORD=root
 
 ENV MYSQL_DATABASE=$MYSQL_DATABASE
