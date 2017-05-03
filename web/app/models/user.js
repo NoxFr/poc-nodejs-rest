@@ -11,11 +11,20 @@ module.exports = function(sequelize, DataTypes) {
 		},
 		login: {
 			type: DataTypes.STRING
+		},
+		nom: {
+			type: DataTypes.STRING
+		},
+		prenom: {
+			type: DataTypes.STRING
 		}
 	}, {
 		timestamps: false,
 		tableName: 't_users'
 	});
+
+	// Create tables if not exists
+	sequelize.sync({force : true});
 
 	return User;
 };

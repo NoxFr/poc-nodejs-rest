@@ -66,7 +66,9 @@ module.exports = function(router) {
          logger.info('Création d\'un utilisateur');
          logger.info('Données reçues : ' + JSON.stringify(req.body));
          models.User.create({
-            login: req.body.login
+            login: req.body.login,
+            nom: req.body.nom,
+            prenom: req.body.prenom
          }).then(function() {
             res.sendStatus(200);
          });
