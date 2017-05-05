@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: scalab-users-service-web
+  namespace: scalab
   labels:
     app: scalab-users-service
 spec:
