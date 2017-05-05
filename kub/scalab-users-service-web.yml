@@ -22,6 +22,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: scalab-users-service-web
+  namespace: scalab
   labels:
     app: scalab-users-service
 spec:
