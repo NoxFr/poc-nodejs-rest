@@ -2,6 +2,7 @@ var changeCase = require('change-case');
 var express = require('express');
 var routes = require('require-dir')();
 var logger = require('winston');
+var pkgInfo = require('../../package.json');
 
 module.exports = function(app) {
   'use strict';
@@ -14,8 +15,12 @@ module.exports = function(app) {
 
     // Initialize the route to add its functionality to router
     require('./' + routeName)(router);
+    
+    var url = '/'+ pkgInfo.name + '/' + changeCase.paramCase(routeName);
 
+    logger.info("[ROUTES] REST service "+ routeName +"  exposed on  : " + url);
+    
     // Add router to the speficied route name in the app
-    app.use('/' + changeCase.paramCase(routeName), router);
+    app.use(url, router);
   });
 };

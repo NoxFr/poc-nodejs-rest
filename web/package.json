@@ -1,5 +1,5 @@
 {
-  "name": "scalab-nodejs-service",
+  "name": "scalab-users-service",
   "version": "0.0.2",
   "description": "Helloworld NodeJS Poc",
   "main": "index.js",
@@ -20,6 +20,7 @@
     "morgan": "^1.8.1",
     "mysql": "^2.13.0",
     "nconf": "^0.8.4",
+    "pkginfo": "^0.4.0",
     "require-dir": "^0.3.1",
     "sequelize": "^3.30.4",
     "underscore": "^1.8.3",
