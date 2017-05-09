@@ -7,16 +7,11 @@ metadata:
     app: scalab-users-service
 spec:
   ports:
-  - port: 80
+  - port: 8090
     targetPort : 4000
   selector:
     app: scalab-users-service
     tier: web
-  type : LoadBalancer
-status:
-  loadBalancer:
-      ingress:
-        - ip : 193.70.7.76
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
@@ -26,6 +21,7 @@ metadata:
   labels:
     app: scalab-users-service
 spec:
+  replicas : 2
   strategy:
     type: Recreate
   template:
