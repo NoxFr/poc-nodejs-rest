@@ -4,8 +4,6 @@ Micro Service NodeJS [LOT3]
 
 MicroService REST de gestion des utilisateurs.
 
-Jira : http://typunch/jira/browse/LAB-58
-
 ## Technologies & Frameworks utilisées
 
 ### Applicatif :
@@ -20,6 +18,9 @@ Jira : http://typunch/jira/browse/LAB-58
 ### Docker :
  
  - docker-compose v3
+
+### Kubernetes :
+Yaml dispos dans le dossier `kub`
 
 ## Installation & Démarrage
 
@@ -45,11 +46,3 @@ TODO: A Compléter
 ## Historique
 - 0.0.2 - 20170421 - Ajout d'une BDD MySQL
 - 0.0.1 - 20170421 - Initialisation
-
-## Contributeurs
-      
-- Mathieu DURAND (mathieu.durand@scalian.com)
-        
-## License
-
-TODO
